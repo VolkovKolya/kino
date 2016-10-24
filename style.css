@@ -36,11 +36,6 @@ blockquote, q {
     quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
 
 table {
     border-collapse: collapse;
@@ -61,80 +56,77 @@ body {
 }
 
 .wrapper {
-    width: 100%;
+    width: 90%;
     font-size: 20px;
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
+    padding-left: 10%;
+    height: 5%;
+
 }
 
 .header {
     height: 45px;
     background: cornflowerblue !important;
-
 }
 
 .logo {
-    margin: 0px 5px;
     height: 100%;
-    width: 8%;
-    background: white;
-    display: inline-block;
+    width: 20%;
     font-size: 24px;
+    display: inline-block;
+    background-color: cornflowerblue;
+    border-right: 1px solid black ;
 }
 
 .news {
+    padding-left: 5%;
     content: normal;
     margin: 10px 7px;
     left: 25%;
-    width: 17%;
-    display: inline-block;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    width: 15%;
+    display: inline;
 }
 
 .films {
-    margin: 0px 7px;
-    height: 25px;
-    width: 17%;
-    display: inline-block;
+    padding-left: 10%;
+    margin: 0 7px;
+    height: 100%;
+    width: 15%;
+    display: inline;
 }
 
 .blogs {
-    margin: 0px 5px;
-    height: 25px;
-    width: 17%;
-    display: inline-block;
-    border-left: 1px solid black;
-
+    padding-left: 15%;
+    margin: 0 5px;
+    height: 100%;
+    width: 15%;
+    display: inline;
 }
 
 .mypage {
+    padding-left: 10%;
     margin: 0px 5px;
-    height: 25px;
-    width: 17%;
-    display: inline-block;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    height: 100%;
+    width: 15%;
+    display: inline;
 }
 
 .entry {
     position: absolute;
     top: 10px;
-    right: 1%;
+    right: 5px;
     height: 25px;
-    width: 17%;
+    width: 15%;
     display: inline-block;
 }
 
 .content {
-    padding: 0 0 40px;
+    height: 90%;
 }
 
 .footer1 {
-    margin: -20px auto 0;
-    min-width: 1000px;
-    height: 30px;
+    height: 5%;
     background: cornflowerblue !important;
     position: relative;
 }
+
+
