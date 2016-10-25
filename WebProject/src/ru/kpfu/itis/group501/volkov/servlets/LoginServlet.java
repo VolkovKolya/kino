@@ -1,20 +1,17 @@
 package ru.kpfu.itis.group501.volkov.servlets;
 
-import ru.kpfu.itis.group501.volkov.configs.BdSingleton;
+import ru.kpfu.itis.group501.volkov.helpers.Hash;
+import ru.kpfu.itis.group501.volkov.helpers.Token;
+import ru.kpfu.itis.group501.volkov.services.TokenService;
+import ru.kpfu.itis.group501.volkov.services.UserService;
+import ru.kpfu.itis.group501.volkov.entities.User;
 import ru.kpfu.itis.group501.volkov.helpers.Helper;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-
 /**
  * Created by volkov on 18.10.2016.
  */
@@ -25,32 +22,31 @@ public class LoginServlet extends HttpServlet {
     public void init() throws ServletException {
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String login = request.getParameter("login").toLowerCase();
-        String password = request.getParameter("password");
+        String login = req.getParameter("login").toLowerCase();
+        String password = req.getParameter("password");
 
-        try {
-            PreparedStatement st = BdSingleton.getConnection().prepareStatement("select users.login,password from users where users.login = ?");
-            st.setString(1,login);
-            ResultSet rs = st.executeQuery();
-            if (rs.next()) {
-                if (password.equals(rs.getString("password"))) {
-                    request.getSession().setAttribute("current_user", login);
-                    Cookie cookie = new Cookie("current_user",login);
-                    cookie.setMaxAge(24*60*60);
-                    response.addCookie(cookie);
-                    response.sendRedirect("/secret");
-                } else {
-                    response.sendRedirect("/login?err=Incorrect Password&login=" + login);
-                }
+        UserService userService = new UserService();
+        User currentUser = userService.find(login);
+        if (currentUser != null) {
+            if (Hash.getMd5Apache(password).equals(currentUser.getPassword())) {
+
+                req.getSession().setAttribute("current_user", currentUser);
+
+                String token = Token.getToken();
+                Cookie cookie = new Cookie("current_user",token);
+                cookie.setMaxAge(30*24*60*60);
+                resp.addCookie(cookie);
+                TokenService ts = new TokenService();
+                ts.addToken(""+currentUser.getId(), token);
+
+                resp.sendRedirect("/mypage");
+            } else {
+                resp.sendRedirect("/login?err=Неправильный пароль&login=" + login);
             }
-            else {
-                response.sendRedirect("/login?err=Wrong login&login=" + login);
-            }
-        }
-        catch (SQLException e) {
-            e.printStackTrace();
+        } else {
+            resp.sendRedirect("/login?err="+userService.getError().getMessage());
         }
 
 
