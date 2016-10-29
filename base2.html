@@ -8,10 +8,11 @@
     <meta name="author" content="">
 
 
-    <title>Sticky Footer Navbar Template for Bootstrap</title>
+    <title>Base</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="sticky-footer-navbar.css" rel="stylesheet">
@@ -47,7 +48,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Вход/Выход <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#login">Войти</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#login-modal">Войти</a></li>
                         <li><a href="#logout">Выйти</a></li>
                         <li><a href="#registration">Регистрация</a></li>
                     </ul>
@@ -56,7 +57,22 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            <h1>Войдите в свой аккаунт</h1><br>
+            <form>
+                <input type="text" name="user" placeholder="Логин">
+                <input type="password" name="pass" placeholder="Пароль">
+                <input type="submit" name="login" class="login loginmodal-submit" value="Войти">
+            </form>
 
+            <div class="login-help">
+                <a href="#registration">Регистрация</a> - <a href="#">Забыли пароль?</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="container">
 

@@ -9,8 +9,9 @@
     <title>Регистрация</title>
 
     <link href="bootstrap.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
     <link href="sticky-footer-navbar.css" rel="stylesheet">
-    <link href="test.css" rel="stylesheet">
+    <link href="registration2.css" rel="stylesheet">
 
     <script src="jquery.min.js"></script>
     <script src="bootstrap.js"></script>
@@ -41,7 +42,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Вход/Выход <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#login">Войти</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#login-modal">Войти</a></li>
                         <li><a href="#logout">Выйти</a></li>
                         <li><a href="#registration">Регистрация</a></li>
                     </ul>
@@ -50,7 +51,22 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            <h1>Войдите в свой аккаунт</h1><br>
+            <form>
+                <input type="text" name="user" placeholder="Логин">
+                <input type="password" name="pass" placeholder="Пароль">
+                <input type="submit" name="login" class="login loginmodal-submit" value="Войти">
+            </form>
 
+            <div class="login-help">
+                <a href="#registration">Регистрация</a> - <a href="#">Забыли пароль?</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="container">
     <form class="form-signin" role="form">
