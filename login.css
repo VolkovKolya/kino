@@ -85,3 +85,24 @@
 .login-help{
     font-size: 12px;
 }
+
+.menu1 {
+    font-size: 20px;
+}
+.logo1{
+    margin-top: -15px;
+}
+
+.registration_label{
+    font-size: 18px;
+}
+
+.page1{
+    background: linear-gradient(to bottom, rgba(255,0,0,0), rgb(255, 135, 135)); /*Standard*/
+    /*background: linear-gradient(to bottom, rgba(255,0,0,0), rgb(255, 135, 135)); !*Standard*!*/
+}
+
+.news1{
+    width: 100%;
+}
+
