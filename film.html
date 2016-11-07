@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Название фильма</title>
+
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+    <link href="news.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+
+
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.js"></script>
+
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+</head>
+
+<body class="page1">
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo1" href="#home"><img src="logo.jpg" height=50px width=130px></a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav menu1">
+                <li><a href="#news">Новости</a></li>
+                <li><a href="#films">Фильмы</a></li>
+                <li><a href="#blogs">Блоги</a></li>
+                <li><a href="#mypage">Моя страница</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Вход/Выход <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#login" data-toggle="modal" data-target="#login-modal">Войти</a></li>
+                        <li><a href="#logout">Выйти</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     style="display: none;">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            <h1>Войдите в свой аккаунт</h1><br>
+            <form>
+                <input type="text" name="user" placeholder="Логин">
+                <input type="password" name="pass" placeholder="Пароль">
+                <label>
+                    <input type="checkbox"> Запомнить меня
+                </label>
+                <input type="submit" name="login" class="login loginmodal-submit" value="Войти">
+            </form>
+
+            <div class="login-help">
+                <a href="#registration">Регистрация</a> - <a href="#">Забыли пароль?</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div  class="row">
+
+        <div id="film1" class="col-lg-8">
+
+            <h1>Название</h1>
+
+            <!-- Preview Image -->
+            <img class="img-responsive" src="http://placehold.it/600x300" alt="">
+
+
+            <div class=" col-md-9 col-lg-9 ">
+                <table class="table table-user-information">
+                    <tbody>
+                    <tr>
+                        <td>Название:</td>
+                        <td>Начало</td>
+                    </tr>
+                    <tr>
+                        <td>Год:</td>
+                        <td>2010</td>
+                    </tr>
+
+                    <tr>
+                        <td>Старана:</td>
+                        <td>США, Великобритания</td>
+                    </tr>
+                    <tr>
+                        <td>Режиссёр:</td>
+                        <td>Кристофер Нолан</td>
+                    </tr>
+                    <tr>
+                        <td>Жанр</td>
+                        <td>научная фантастика</td>
+                    </tr>
+                    <tr>
+                        <td>Средняя оценка</td>
+                        <td>12 из 10</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>Описание</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos
+                    iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat.
+                    Temporibus, voluptatibus.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis
+                    unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat
+                    perspiciatis. Enim, iure!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas
+                    placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem
+                    obcaecati?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo,
+                    aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam
+                    recusandae? Qui, necessitatibus, est!</p>
+                <p>
+                <h3>Трейлер</h3>
+                <img class="img-responsive" src="http://placehold.it/600x300" alt="">
+
+                <span><a class="like-Unlike">Мне нравится</a></span>
+                <script>
+                    function LikeUnLikeButton() {
+                        $(".like-Unlike").click(function (e) {
+                            if ($(this).html() == "Мне нравится") {
+                                $(this).html('Не нравится');
+                            }
+                            else {
+                                $(this).html('Мне нравится');
+                            }
+                        });
+                    }
+                    LikeUnLikeButton();
+                </script>
+
+
+                <hr>
+
+
+                <!-- Blog Comments -->
+                <!-- Comments Form -->
+                <div class="well">
+                    <h4>Напишите комментраий</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </div>
+
+                <hr>
+
+
+                <!-- Comment -->
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="http://placehold.it/64x64" alt="">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Марат
+                            <small>9:00 24 августа, 2013</small>
+                        </h4>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin
+                        commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum
+                        nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    </div>
+                </div>
+
+                <!-- Comment -->
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="http://placehold.it/64x64" alt="">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Коля
+                            <small>9:00 24 августа, 2013</small>
+                        </h4>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin
+                        commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum
+                        nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        <!-- Nested Comment -->
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="http://placehold.it/64x64" alt="">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Катя
+                                    <small>9:00 24 августа, 2013</small>
+                                </h4>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra
+                                turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+                                in faucibus.
+                            </div>
+                        </div>
+                        <!-- End Nested Comment -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class=" buttons">
+        <a href="#" id="button1" class="btn btn-primary">Добавить в "Избранное"</a>
+        <a href="#" id="button2" class="btn btn-primary">Добавить в "Хочу посмотреть"</a>
+        <a href="#" id="button3" class="btn btn-primary">Добавить в "Просмотренное"</a>
+        <input id="rate1" name="rate1" type="number"
+               placeholder="Ваша оценка" class="form-control input-md">
+        <a href="#" class="btn btn-primary">Оценить</a>
+    </div>
+
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">Это знак. Плыви обратно, если еще помнишь, как.</p>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Имя</title>
+
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+    <link href="news.css">
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+
+
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.js"></script>
+
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+</head>
+
+<body class="page1">
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo1" href="#home"><img src="logo.jpg" height=50px width=130px></a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav menu1">
+                <li><a href="#news">Новости</a></li>
+                <li><a href="#films">Фильмы</a></li>
+                <li><a href="#blogs">Блоги</a></li>
+                <li><a href="#mypage">Моя страница</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Вход/Выход <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#login" data-toggle="modal" data-target="#login-modal">Войти</a></li>
+                        <li><a href="#logout">Выйти</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     style="display: none;">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            <h1>Войдите в свой аккаунт</h1><br>
+            <form>
+                <input type="text" name="user" placeholder="Логин">
+                <input type="password" name="pass" placeholder="Пароль">
+                <label>
+                    <input type="checkbox"> Запомнить меня
+                </label>
+                <input type="submit" name="login" class="login loginmodal-submit" value="Войти">
+            </form>
+
+            <div class="login-help">
+                <a href="#registration" class="registration_label">Регистрация</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row ">
+        <!--<div class="col-md-5  toppad  pull-right col-md-offset-3 ">-->
+            <!--<A href="#edit">Редактировать</A>-->
+            <!--<br>-->
+            <!--<p class=" text-info">May 05,2014,03:00 pm </p>-->
+        <!--</div>-->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad profile1">
+            <div class="panel panel-info">
+                <div class="panel-heading ">
+                    <h3 class="panel-title ">Катя</h3>
+                </div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 " align="center"><img alt="User Pic"
+                                                                            src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png"
+                                                                            class="img-circle img-responsive">
+                            <a href="#" class="btn btn-primary button3">Подписчики</a>
+                            <a href="#" class="btn btn-primary button3">Подписки</a>
+                            <a href="#" class="btn btn-primary button3">Хочу посмотреть</a>
+                            <a href="#" class="btn btn-primary button3">Просмотренные</a>
+                            <a href="#" class="btn btn-primary button3">Избранное</a>
+                        </div>
+                        <div class="col-xs-10 col-sm-10 hidden-md hidden-lg"><br>
+                            <dl>
+                                <dt>Логин:</dt>
+                                <dd>Kate</dd>
+                                <dt>Имя Фамиля</dt>
+                                <dd>Катя Свинтёнок</dd>
+                                <dt>DATE OF BIRTH</dt>
+                                <dd>11/12/1996</dd>
+                                <dt>Почта</dt>
+                                <dd>kate@mail.ru</dd>
+                                <dt>Страна:</dt>
+                                <dd>Россия</dd>
+                                <dt>Город:</dt>
+                                <dd>Казань</dd>
+                            </dl>
+                        </div>
+                        <div class=" col-md-9 col-lg-9 ">
+                            <table class="table table-user-information">
+                                <tbody>
+                                <tr>
+                                    <td>Логин:</td>
+                                    <td>Kate</td>
+                                </tr>
+                                <tr>
+                                    <td>Имя фамилия:</td>
+                                    <td>Катя Свинтёнок</td>
+                                </tr>
+                                <tr>
+                                    <td>Почта:</td>
+                                    <td>kate@mail.ru</td>
+                                </tr>
+
+                                <tr>
+                                <tr>
+                                    <td>Старана</td>
+                                    <td>Россия</td>
+                                </tr>
+                                <tr>
+                                    <td>Город</td>
+                                    <td>Казань</td>
+                                </tr>
+                                <tr>
+                                    <td>О себе</td>
+                                    <td>существую</td>
+                                </tr>
+                                <tr>
+                                    <td>Любимые жанры</td>
+                                    <td>научные</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <a href="#" class="btn btn-primary button4">Подписаться(Редактировать)</a>
+                            <a href="#" class="btn btn-primary button4">Написать сообщение(мои сообщения)</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <!--<a title="Broadcast Message" data-toggle="tooltip" type="button"-->
+                    <!--class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>-->
+                    <a href="#edit" title="Редактировать" data-toggle="tooltip" type="button"
+                       class="btn btn-sm btn-warning "><i class="glyphicon glyphicon-edit"></i></a>
+                    <a title="Удалить" data-toggle="tooltip" type="button"
+                       class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">Это знак. Плыви обратно, если еще помнишь, как.</p>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</body>
+</html>
