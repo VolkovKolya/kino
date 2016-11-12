@@ -6,12 +6,13 @@
     -o-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 html {
     background-color: #fff;
     font-size: 13px;
 }
 
-.content{
+.content {
     font-size: 20px;
     width: 80%;
     margin-left: 10%;
@@ -20,23 +21,24 @@ html {
 
 }
 
-.reg_form{
+.reg_form {
     padding-left: 10%;
     display: inline-block;
 
 }
-.reg_form1{
+
+.reg_form1 {
     display: inline-block;
-    margin-left:9%;
+    margin-left: 9%;
 }
 
-.put{
+.put {
     position: absolute;
     bottom: 10%;
     left: 40%;
 }
 
-.title{
+.title {
     font-size: 26px;
     font-weight: bold;
     align-content: right;
@@ -48,12 +50,12 @@ input {
     border: 1px solid #BEBEBE;
     width: 55%;
 }
+
 label {
     width: 6.5em;
     position: relative;
 
 }
-
 
 input ~ span::after {
     content: '';
@@ -61,10 +63,9 @@ input ~ span::after {
     vertical-align: middle;
 }
 
-.genre{
+.genre {
     display: inline;
 }
-
 
 input:focus ~ span::after,
 input:focus:valid ~ span::after,
@@ -76,7 +77,6 @@ input:valid ~ span::after {
     content: '✓';
     color: #4E9B5A;
 }
-
 
 input:invalid ~ span::after {
     content: '×';

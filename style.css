@@ -36,7 +36,6 @@ blockquote, q {
     quotes: none;
 }
 
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -74,7 +73,7 @@ body {
     font-size: 24px;
     display: inline-block;
     background-color: cornflowerblue;
-    border-right: 1px solid black ;
+    border-right: 1px solid black;
 }
 
 .news {

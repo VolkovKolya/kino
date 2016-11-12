@@ -6,6 +6,11 @@
 .panel1 {
     background-color: white !important;
     border-color: white !important;
+
+}
+
+#panel2 {
+    color: #232323;
 }
 
 .table1 {
@@ -48,8 +53,9 @@
     padding: 5px;
     height: 100%;
 }
-#film1{
-    width: 90%!important;
+
+#film1 {
+    width: 90% !important;
 }
 
 .dropdown-user:hover {
