@@ -32,9 +32,29 @@ public class CommentsService implements CommentsServiceInterface {
         }
     }
 
+    public void addMovie(String text, String user_id, String post_id, String data) {
+        error = null;
+        RegEx re = new RegEx();
+        if (re.IsRight(text) ){
+            if (text != null) {
+                Comment newComment = new Comment(text, user_id,post_id, data);
+                commentDao.addCommentMovie(newComment);
+            } else {
+                error = new Error("wrong_text", "Вы ввели пустой текст!");
+            }
+        }else{
+            error = new Error("wrong_text", "Не допустимое содержимое !");
+        }
+    }
+
     @Override
     public void delete(String id) {
-
+        error = null;
+        if (commentDao.findCommentId(id)!=null)
+            commentDao.deleteComment(id);
+        else {
+            error = new Error("comment_not_found", "Искомый комментарий не найден!");
+        }
     }
 
     @Override
@@ -53,13 +73,23 @@ public class CommentsService implements CommentsServiceInterface {
         return error;
     }
 
-    public List<Comment> getComments(){
+    public List<Comment> getComments(String id){
         error = null;
-        if (commentDao.getComments() == null) {
+        if (commentDao.getComments(id) == null) {
             error = new Error("comment_not_found", "Комментариев нет!");
             return null;
         } else {
-            return commentDao.getComments();
+            return commentDao.getComments(id);
+        }
+    }
+
+    public List<Comment> getCommentsMovie(String id){
+        error = null;
+        if (commentDao.getCommentsMovie(id) == null) {
+            error = new Error("comment_not_found", "Комментариев нет!");
+            return null;
+        } else {
+            return commentDao.getCommentsMovie(id);
         }
     }
 }

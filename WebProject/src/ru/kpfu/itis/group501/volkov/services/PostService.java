@@ -36,7 +36,12 @@ public class PostService implements PostServiceInterface {
 
     @Override
     public void delete(String id) {
-
+        error = null;
+        if (postDao.findPostId(id)!=null)
+            postDao.deletePost(id);
+        else {
+            error = new Error("post_not_found", "Искомый пост не найден!");
+        }
     }
 
     @Override
@@ -52,7 +57,7 @@ public class PostService implements PostServiceInterface {
 
     public List getNews(String sort){
         if (sort!=null){
-            if (sort.equals("Last")) return postDao.getLast();
+            if (sort.equals("last")) return postDao.getLast();
             else return postDao.getPopular();
         }
         else{

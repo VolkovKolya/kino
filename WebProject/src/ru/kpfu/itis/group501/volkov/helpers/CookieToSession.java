@@ -22,7 +22,9 @@ public class CookieToSession {
                         TokenServiceInterface tokenService = new TokenService();
                         String id = tokenService.findToken(cookie.getValue());
                         UserServiceInterface userService = new UserService();
-                        return userService.findId(id);
+                        if (id !=null) {
+                            return userService.findId(id);
+                        }
 
 
                     }

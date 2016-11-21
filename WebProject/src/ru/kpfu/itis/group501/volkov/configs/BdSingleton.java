@@ -8,7 +8,7 @@ import java.sql.SQLException;
  * Created by volkov on 20.10.2016.
  */
 public class BdSingleton {
-    private static final String URL = "jdbc:postgresql://localhost:5432/sait20160928";
+    private static final String URL = "jdbc:postgresql://localhost:5432/kino";
     private static final String USERNAME = "postgres";
     private static final String PASSWORD = "cegthvty";
     private static final String DRIVER = "org.postgresql.Driver";

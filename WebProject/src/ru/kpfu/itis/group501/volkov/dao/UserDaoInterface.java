@@ -13,8 +13,6 @@ public interface UserDaoInterface {
     User findUser(String login) ;
     User findUserId(String id) ;
 
-    User selectRequest(String request, String param) ;
-
 
     void deleteUser(String id) ;
 

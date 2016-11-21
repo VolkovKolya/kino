@@ -9,6 +9,6 @@ import java.util.List;
  */
 public interface LikeDaoInterface {
     void addLike(Like like) ;
-    void deleteLike(String id) ;
+    void deleteLike(String user_id, String post_id) ;
     List<Like> getLikes(String post_id);
 }

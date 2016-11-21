@@ -15,13 +15,15 @@ public class User {
     private String country;
 	private String city;
     private String about;
+    private String image;
     private boolean is_admin;
+    private String follower;
 
 
-    public User(String first_name,String last_name, String login, String password,String email,String country, String city, String about) {
-		this(null,first_name,last_name,login,password,email,country,city,about);
+    public User(String first_name,String last_name, String login, String password,String email,String country, String city, String about,String image) {
+		this(null,first_name,last_name,login,password,email,country,city,about,image);
     }
-    public User(String id,String first_name,String last_name, String login, String password,String email,String country, String city, String about) {
+    public User(String id,String first_name,String last_name, String login, String password,String email,String country, String city, String about,String image) {
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -32,6 +34,7 @@ public class User {
         this.city = city;
         this.about = about;
         this.is_admin = false;
+        this.image = image;
     }
 	public String getCity() {
         return city;
@@ -71,10 +74,16 @@ public class User {
     public String getLogin() {
         return login;
     }
-
+    public String getImage(){return image;}
 
     @Override
     public String toString() {
         return getFirst_Name();
+    }
+    public void setFollower(String s){
+        follower=s;
+    }
+    public String getFollower(){
+        return follower;
     }
 }

@@ -15,8 +15,9 @@ public class UserFilter implements Filter {
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
 
-        ((HttpServletRequest) req).getSession().setAttribute("current_user", CookieToSession.add(req));
-
+        if (CookieToSession.add(req) != null) {
+            ((HttpServletRequest) req).getSession().setAttribute("current_user", CookieToSession.add(req));
+        }
         if (((HttpServletRequest) req).getSession().getAttribute("current_user") != null) {
 
             chain.doFilter(req, resp);

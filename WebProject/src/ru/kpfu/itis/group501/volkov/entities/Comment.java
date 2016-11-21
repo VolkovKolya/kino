@@ -9,7 +9,8 @@ public class Comment {
     private String user_id;
     private String data;
     private String post_id;
-
+    private String userName;
+    private String userImage;
 
     public Comment(String text, String user_id, String post_id, String data) {
         this(null,text,user_id,post_id,data);
@@ -39,4 +40,12 @@ public class Comment {
     public String getId() {
         return id;
     }
+
+    public String getUserName() {
+        return userName;
+    }
+    public String getUserImage() {return userImage;}
+
+    public void setUserName(String s) {userName = s;}
+    public void setUserImage(String s) { userImage = s;}
 }

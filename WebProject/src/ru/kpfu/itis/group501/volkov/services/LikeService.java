@@ -12,6 +12,9 @@ import java.util.List;
 public class LikeService implements LikeServiceInterface {
     private LikeDao likeDao = null;
     private Error error = null;
+    public LikeService() {
+        this.likeDao = new LikeDao();
+    }
     @Override
     public void add(String user_id, String post_id) {
         Like newLike = new Like( user_id,post_id);
@@ -20,7 +23,8 @@ public class LikeService implements LikeServiceInterface {
     }
 
     @Override
-    public void delete(String id) {
+    public void delete(String user_id, String post_id) {
+        likeDao.deleteLike( user_id, post_id);
 
     }
 

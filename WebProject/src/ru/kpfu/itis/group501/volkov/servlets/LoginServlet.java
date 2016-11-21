@@ -23,30 +23,29 @@ public class LoginServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         String login = req.getParameter("login").toLowerCase();
         String password = req.getParameter("password");
-
         UserService userService = new UserService();
         User currentUser = userService.find(login);
         if (currentUser != null) {
             if (Hash.getMd5Apache(password).equals(currentUser.getPassword())) {
 
                 req.getSession().setAttribute("current_user", currentUser);
+                if (req.getParameter("remember")!= null){
+                    String token = Token.getToken();
+                    Cookie cookie = new Cookie("current_user",token);
+                    cookie.setMaxAge(30*24*60*60);
+                    resp.addCookie(cookie);
+                    TokenService ts = new TokenService();
+                    ts.addToken(currentUser.getId(), token);
+                }
 
-                String token = Token.getToken();
-                Cookie cookie = new Cookie("current_user",token);
-                cookie.setMaxAge(30*24*60*60);
-                resp.addCookie(cookie);
-                TokenService ts = new TokenService();
-                ts.addToken(""+currentUser.getId(), token);
-
-                resp.sendRedirect("/mypage");
+                resp.sendRedirect("/user?id="+currentUser.getId());
             } else {
-                resp.sendRedirect("/login?err=Неправильный пароль&login=" + login);
+                resp.sendRedirect("/posts?err=Wrong Password&login=" + login);
             }
         } else {
-            resp.sendRedirect("/login?err="+userService.getError().getMessage());
+            resp.sendRedirect("/posts?err="+userService.getError().getMessage());
         }
 
 
@@ -58,8 +57,10 @@ public class LoginServlet extends HttpServlet {
         Map<String, Object> root = new HashMap<>();
         root.put("err", request.getParameter("err"));
         root.put("login", request.getParameter("login"));
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=utf-8");
-        Helper.render(request,response,"login.ftl",root);
+        response.sendRedirect("/posts");
 
     }
 }

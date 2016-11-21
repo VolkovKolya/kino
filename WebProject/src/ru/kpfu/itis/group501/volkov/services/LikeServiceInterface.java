@@ -9,7 +9,8 @@ import java.util.List;
  */
 public interface LikeServiceInterface {
     void add( String user_id, String post_id);
-    void delete(String id);
+    void delete(String user_id, String post_id);
     List<Like> getLikes(String post_id);
     Error getError();
+
 }

@@ -1,0 +1,218 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+.loginmodal-container {
+    padding: 30px;
+    max-width: 350px;
+    width: 100% !important;
+    background-color: #F7F7F7;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    font-family: roboto;
+}
+
+.loginmodal-container h1 {
+    text-align: center;
+    font-size: 1.8em;
+    font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+    height: 44px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    padding: 0 8px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+    border: 1px solid #b9b9b9;
+    border-top: 1px solid #a0a0a0;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.loginmodal {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    height: 36px;
+    padding: 0 8px;
+}
+
+.loginmodal-submit {
+    border: 0px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    background-color: #4d90fe;
+    padding: 17px 0px;
+    font-family: roboto;
+    font-size: 14px;
+}
+
+.loginmodal-submit:hover {
+    border: 0px;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    background-color: #357ae8;
+}
+
+.loginmodal-container a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    opacity: 0.6;
+    transition: opacity ease 0.5s;
+}
+
+.login-help {
+    font-size: 12px;
+}
+
+.menu1 {
+    font-size: 20px;
+}
+
+.logo1 {
+    margin-top: -15px;
+}
+
+.registration_label {
+    font-size: 18px;
+}
+
+.page1 {
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgb(232, 220, 193)); /*Standard*/
+    /*background: linear-gradient(to bottom, rgba(255,0,0,0), rgb(255, 135, 135)); !*Standard*!*/
+}
+
+.news1 {
+    width: 100%;
+}
+
+.button3 {
+    margin-bottom: 5% !important;
+    width: 115% !important;
+}
+
+.profile1 {
+    margin-left: 10%;
+    width: 80% !important;
+}
+
+.button4 {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 10% !important;
+    width: 35% !important;
+}
+
+.title2 {
+    background-color: white;
+}
+
+.buttons {
+    width: 30%;
+    position: fixed;
+    top: 7%;
+    left: 65%;
+    margin: 3%;
+    display: inline;
+}
+
+#rate1, #button1, #button2, #button3 {
+    width: 53% !important;
+    margin: 3px;
+}
+
+#films {
+    border-color: #ffa19b !important;
+}
+
+#header1 {
+    background-color: white !important;
+}
+
+.footer1 {
+    background-color: white !important;
+}
+
+.follower1 {
+    margin-left: 2%;
+    margin-top: 1%;
+    border: 1px solid lavender;
+    width: 95% !important;
+    margin-bottom: 1%;
+}
+
+.buttons1 {
+    display: inline-block;
+    margin-top: 1%;
+    width: 40%;
+    float: right;
+}
+
+.follower_button {
+
+    width: 60%;
+    align-content: center;
+}
+
+.table_name {
+    background-color: whitesmoke;
+    font-size: 20px !important;
+}
+
+.table1 {
+    margin-left: 10%;
+}
+
+.table_content {
+    background-color: white;
+}
+
+.back1 {
+    font-size: 16px !important;
+    color: #6f6f6f !important;
+}
+
+.message1 {
+    margin-left: 2%;
+    margin-top: 1%;
+    border: 1px solid lavender;
+    width: 95% !important;
+    margin-bottom: 1%;
+}
+
+.yourmessage {
+    width: 95%;
+    margin-top: 10% !important;
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+
+.share_button1 {
+    margin-left: 3%;
+    margin-bottom: 2%;
+    background-color: whitesmoke;
+}
+
+
+

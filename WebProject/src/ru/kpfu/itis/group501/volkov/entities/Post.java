@@ -11,6 +11,7 @@ public class Post {
     private String data;
     private String video;
     private String image;
+    private String nameUser;
 
     public Post(String title,String text, String user_id, String data,String video,String image) {
         this(null,title,text,user_id,data,video,image);
@@ -22,7 +23,7 @@ public class Post {
         this.user_id = user_id;
         this.data = data;
         this.video = video;
-        this.video = image;
+        this.image = image;
     }
     public String getTitle() {
         return title;
@@ -48,5 +49,14 @@ public class Post {
 
     public String getImage() {
         return image;
+    }
+    public String getNameUser() {
+        return nameUser;
+    }
+    public void setNameUser( String s) {
+        nameUser = s;
+    }
+    public void setText( String s) {
+        text = s;
     }
 }
